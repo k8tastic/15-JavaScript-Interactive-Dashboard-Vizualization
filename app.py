@@ -8,9 +8,10 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine
 
-from flask import Flask, jsonify, render_template
+# from flask import Flask, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 
+from flask import Flask, jsonify, render_template, request, flash, redirect
 app = Flask(__name__)
 
 
@@ -98,4 +99,4 @@ def samples(sample):
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
